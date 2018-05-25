@@ -1,0 +1,407 @@
+Colin Quinn
+ICS 462 Assignment #3
+
+Request 512 word buffer.
+Expected values:
+	Address: -2
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 10, 255 : 0, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+	Address: -2
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 10, 255 : 0, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+Request 4 word buffer.
+Expected values:
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 1, 63 : 1, 31 : 1, 15 : 1, 7 : 1
+
+	Address: 00CDBF94
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 1, 63 : 1, 31 : 1, 15 : 1, 7 : 1
+
+Return 7 word buffer.
+Expected values:
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 10, 255 : 0, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 10, 255 : 0, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+Request 10 511 word buffers.
+Expected values:
+	Memory status: tight
+	Count of buffer sizes:
+	511 : 0, 255 : 0, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+	Address: 00CDBF94
+	Address: 00CDC794
+	Address: 00CDCF94
+	Address: 00CDD794
+	Address: 00CDDF94
+	Address: 00CDE794
+	Address: 00CDEF94
+	Address: 00CDF794
+	Address: 00CDFF94
+	Address: 00CE0794
+	Memory status: tight
+	Count of buffer sizes:
+	511 : 0, 255 : 0, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+Request extra 511 word buffer.
+Expected values:
+	Address: -1
+	Memory status: tight
+	Count of buffer sizes:
+	511 : 0, 255 : 0, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+	Address: -1
+	Memory status: tight
+	Count of buffer sizes:
+	511 : 0, 255 : 0, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+Return 10 511 word buffers.
+Expected values:
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 10, 255 : 0, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 10, 255 : 0, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+Request 19 255 word buffers.
+Expected values:
+	Memory status: tight
+	Count of buffer sizes:
+	511 : 0, 255 : 1, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+	Address: 00CDBF94
+	Address: 00CDC394
+	Address: 00CDC794
+	Address: 00CDCB94
+	Address: 00CDCF94
+	Address: 00CDD394
+	Address: 00CDD794
+	Address: 00CDDB94
+	Address: 00CDDF94
+	Address: 00CDE394
+	Address: 00CDE794
+	Address: 00CDEB94
+	Address: 00CDEF94
+	Address: 00CDF394
+	Address: 00CDF794
+	Address: 00CDFB94
+	Address: 00CDFF94
+	Address: 00CE0394
+	Address: 00CE0794
+	Memory status: tight
+	Count of buffer sizes:
+	511 : 0, 255 : 1, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+Request extra 511 word buffer.
+Expected values:
+	Address: -1
+	Memory status: tight
+	Count of buffer sizes:
+	511 : 0, 255 : 1, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+	Address: -1
+	Memory status: tight
+	Count of buffer sizes:
+	511 : 0, 255 : 1, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+Return 19 255 word buffers.
+Expected values:
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 10, 255 : 0, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 10, 255 : 0, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+Request 5 7 word, 2 255 word, 2 127 word, 7 511 word buffers.
+Expected values:
+	Memory status: tight
+	Count of buffer sizes:
+	511 : 1, 255 : 0, 127 : 1, 63 : 1, 31 : 0, 15 : 1, 7 : 1
+
+	Address: 00CDBF94
+	Address: 00CDBFB4
+	Address: 00CDBFD4
+	Address: 00CDBFF4
+	Address: 00CDC014
+	Address: 00CDC394
+	Address: 00CDC794
+	Address: 00CDC194
+	Address: 00CDCB94
+	Address: 00CDCF94
+	Address: 00CDD794
+	Address: 00CDDF94
+	Address: 00CDE794
+	Address: 00CDEF94
+	Address: 00CDF794
+	Address: 00CDFF94
+	Memory status: tight
+	Count of buffer sizes:
+	511 : 1, 255 : 0, 127 : 1, 63 : 1, 31 : 0, 15 : 1, 7 : 1
+
+Return 5 7 word, 2 255 word, 2 127 word, 7 510 word buffers in random order.
+
+Return 5th 7 word buffer
+	Memory status: tight
+	Count of buffer sizes:
+	511 : 1, 255 : 0, 127 : 1, 63 : 1, 31 : 1, 15 : 0, 7 : 0
+
+Return 1st 127 word buffer
+	Memory status: tight
+	Count of buffer sizes:
+	511 : 1, 255 : 0, 127 : 2, 63 : 1, 31 : 1, 15 : 0, 7 : 0
+
+Return 1st 511 word buffer
+	Memory status: tight
+	Count of buffer sizes:
+	511 : 2, 255 : 0, 127 : 2, 63 : 1, 31 : 1, 15 : 0, 7 : 0
+
+Return 2nd 7 word buffer
+	Memory status: tight
+	Count of buffer sizes:
+	511 : 2, 255 : 0, 127 : 2, 63 : 1, 31 : 1, 15 : 0, 7 : 1
+
+Return last through 3rd 511 word buffers
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 3, 255 : 0, 127 : 2, 63 : 1, 31 : 1, 15 : 0, 7 : 1
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 4, 255 : 0, 127 : 2, 63 : 1, 31 : 1, 15 : 0, 7 : 1
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 5, 255 : 0, 127 : 2, 63 : 1, 31 : 1, 15 : 0, 7 : 1
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 6, 255 : 0, 127 : 2, 63 : 1, 31 : 1, 15 : 0, 7 : 1
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 7, 255 : 0, 127 : 2, 63 : 1, 31 : 1, 15 : 0, 7 : 1
+
+Return 2nd 127 word buffer
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 7, 255 : 1, 127 : 1, 63 : 1, 31 : 1, 15 : 0, 7 : 1
+
+Return 3rd 7 word buffer
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 7, 255 : 1, 127 : 1, 63 : 1, 31 : 1, 15 : 0, 7 : 2
+
+Return 2nd 255 word buffer
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 8, 255 : 0, 127 : 1, 63 : 1, 31 : 1, 15 : 0, 7 : 2
+
+Return 2nd 511 word buffer
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 0, 127 : 1, 63 : 1, 31 : 1, 15 : 0, 7 : 2
+
+Return 1st 7 word buffer
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 0, 127 : 1, 63 : 1, 31 : 1, 15 : 1, 7 : 1
+
+Return 2nd 127 word buffer (duplicate: shouldn't change anything)
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 0, 127 : 1, 63 : 1, 31 : 1, 15 : 1, 7 : 1
+
+Return 4th 7 word buffer
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+Return 1st 255 word buffer
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 10, 255 : 0, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+Request 16 7 word buffers.
+Expect to see alternation between 1 and 0 at size 7
+Expect to see 2 1s followed by 2 os at size 15
+Expect to see amount of 1s and 0s in a row increase by one with each size
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 1, 63 : 1, 31 : 1, 15 : 1, 7 : 1
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 1, 63 : 1, 31 : 1, 15 : 1, 7 : 0
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 1, 63 : 1, 31 : 1, 15 : 0, 7 : 1
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 1, 63 : 1, 31 : 1, 15 : 0, 7 : 0
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 1, 63 : 1, 31 : 0, 15 : 1, 7 : 1
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 1, 63 : 1, 31 : 0, 15 : 1, 7 : 0
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 1, 63 : 1, 31 : 0, 15 : 0, 7 : 1
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 1, 63 : 1, 31 : 0, 15 : 0, 7 : 0
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 1, 63 : 0, 31 : 1, 15 : 1, 7 : 1
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 1, 63 : 0, 31 : 1, 15 : 1, 7 : 0
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 1, 63 : 0, 31 : 1, 15 : 0, 7 : 1
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 1, 63 : 0, 31 : 1, 15 : 0, 7 : 0
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 1, 63 : 0, 31 : 0, 15 : 1, 7 : 1
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 1, 63 : 0, 31 : 0, 15 : 1, 7 : 0
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 1, 63 : 0, 31 : 0, 15 : 0, 7 : 1
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 1, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+Return 16 7 word buffers.
+Expected values:
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 10, 255 : 0, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 10, 255 : 0, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+Request 16 random sized buffers.
+	Address: 00CDBF94
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 1, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+	Address: 00CDC394
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 9, 255 : 0, 127 : 1, 63 : 1, 31 : 1, 15 : 1, 7 : 1
+
+	Address: 00CDC794
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 8, 255 : 0, 127 : 1, 63 : 1, 31 : 1, 15 : 1, 7 : 1
+
+	Address: 00CDCF94
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 7, 255 : 0, 127 : 1, 63 : 1, 31 : 1, 15 : 1, 7 : 1
+
+	Address: 00CDD794
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 6, 255 : 1, 127 : 1, 63 : 1, 31 : 1, 15 : 1, 7 : 1
+
+	Address: 00CDC594
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 6, 255 : 1, 127 : 0, 63 : 1, 31 : 1, 15 : 1, 7 : 1
+
+	Address: 00CDDB94
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 6, 255 : 0, 127 : 1, 63 : 1, 31 : 1, 15 : 1, 7 : 1
+
+	Address: 00CDDF94
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 5, 255 : 1, 127 : 1, 63 : 1, 31 : 1, 15 : 1, 7 : 1
+
+	Address: 00CDE394
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 5, 255 : 0, 127 : 1, 63 : 1, 31 : 1, 15 : 1, 7 : 1
+
+	Address: 00CDE794
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 4, 255 : 0, 127 : 1, 63 : 1, 31 : 1, 15 : 1, 7 : 1
+
+	Address: 00CDEF94
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 3, 255 : 1, 127 : 1, 63 : 1, 31 : 1, 15 : 1, 7 : 1
+
+	Address: 00CDC494
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 3, 255 : 1, 127 : 1, 63 : 0, 31 : 1, 15 : 1, 7 : 1
+
+	Address: 00CDF394
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 3, 255 : 0, 127 : 1, 63 : 0, 31 : 1, 15 : 1, 7 : 1
+
+	Address: 00CDF794
+	Memory status: tight
+	Count of buffer sizes:
+	511 : 2, 255 : 1, 127 : 1, 63 : 0, 31 : 1, 15 : 1, 7 : 1
+
+	Address: 00CDFF94
+	Memory status: tight
+	Count of buffer sizes:
+	511 : 1, 255 : 1, 127 : 1, 63 : 0, 31 : 1, 15 : 1, 7 : 1
+
+	Address: 00CDC3B4
+	Memory status: tight
+	Count of buffer sizes:
+	511 : 1, 255 : 1, 127 : 1, 63 : 0, 31 : 1, 15 : 1, 7 : 0
+
+Return 16 random sized buffers.
+Expected values:
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 10, 255 : 0, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
+	Memory status: OK
+	Count of buffer sizes:
+	511 : 10, 255 : 0, 127 : 0, 63 : 0, 31 : 0, 15 : 0, 7 : 0
+
